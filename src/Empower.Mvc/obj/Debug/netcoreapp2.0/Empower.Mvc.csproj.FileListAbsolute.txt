@@ -1,0 +1,11 @@
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/bin/Debug/netcoreapp2.0/Empower.Mvc.deps.json
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/bin/Debug/netcoreapp2.0/Empower.Mvc.runtimeconfig.json
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/bin/Debug/netcoreapp2.0/Empower.Mvc.runtimeconfig.dev.json
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/bin/Debug/netcoreapp2.0/Empower.Mvc.dll
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/bin/Debug/netcoreapp2.0/Empower.Mvc.pdb
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.csprojResolveAssemblyReference.cache
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.csproj.CoreCompileInputs.cache
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.AssemblyInfoInputs.cache
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.AssemblyInfo.cs
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.dll
+/Users/emmasalinas/Desktop/Projects/empowermvc/src/Empower.Mvc/obj/Debug/netcoreapp2.0/Empower.Mvc.pdb
