@@ -5,11 +5,22 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Empower.Mvc.Models;
+using Empower.Mvc.Models;
+using System.Net.Mail;
+using Microsoft.Extensions.Configuration;
+
 
 namespace Empower.Mvc.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IConfiguration _configuration;
+
+        public HomeController(IConfiguration configuration)
+        {
+            _configuration = configuration;
+        }
+
         public IActionResult Index()
         {
             return View();
@@ -17,6 +28,7 @@ namespace Empower.Mvc.Controllers
 
         public IActionResult Contact()
         {
+            
             ViewData["Message"] = "Your contact page.";
             // New up a Contact View Model
             var contact = new ContactViewModel();
@@ -27,6 +39,56 @@ namespace Empower.Mvc.Controllers
         [HttpPost]
         public IActionResult Contact(ContactViewModel viewModel)
         {
+            if (ModelState.IsValid)
+            {
+                // Do something
+                var message = new MailMessage();
+                message.From = 
+                    new MailAddress(
+                        _configuration["Contact:FromEmail"],
+                        _configuration["Contact:FromName"]);
+
+                // Subject 
+                message.Subject = "New contact message";
+
+                // To
+                message.To.Add(
+                    new MailAddress(
+                        _configuration["Contact:ToEmail"],
+                        _configuration["Contact:ToName"]));
+
+                // Message
+                message.Body = $"New contact from {viewModel.Name} ({viewModel.Email}) " +
+                    Environment.NewLine +
+                    viewModel.Message;
+
+                //set up new SmtpClient
+                    var mailClient = new SmtpClient(
+                        _configuration["Contact:SmtpHost"],
+                        Int32.Parse(_configuration["Contact:SmtpPort"]));
+
+                mailClient.UseDefaultCredentials = false;
+
+                mailClient.Credentials = new System.Net.NetworkCredential(
+                    _configuration["Contact:SmtpUsername"], 
+                    _configuration["Contact:SmtpPassword"]);
+
+                mailClient.EnableSsl = true;
+
+                try
+                {
+                    mailClient.Send(message);
+                    viewModel.CompletedAt = DateTime.UtcNow;
+                }
+                catch(Exception ex)
+                {
+                    viewModel.ErrorMessage = "Opps. Something went wrong";
+                }
+
+
+
+
+            }
             return View(viewModel);
         }
 

@@ -20,5 +20,10 @@ namespace Empower.Mvc.Models
         [Required(ErrorMessage = "Please enter your message")]
         [MaxLength(4000, ErrorMessage = "Message cannot exceed 4000 characters")]
         public string Message { get; set; }
+
+        public DateTime? CompletedAt { get; set; }
+
+        public bool HasErrored => !string.IsNullOrWhiteSpace(ErrorMessage);
+        public string ErrorMessage { get; set; }
     }
 }
