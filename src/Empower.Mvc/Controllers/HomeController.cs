@@ -15,18 +15,19 @@ namespace Empower.Mvc.Controllers
             return View();
         }
 
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
         public IActionResult Contact()
         {
             ViewData["Message"] = "Your contact page.";
+            // New up a Contact View Model
+            var contact = new ContactViewModel();
 
-            return View();
+            return View(contact);
+        }
+
+        [HttpPost]
+        public IActionResult Contact(ContactViewModel viewModel)
+        {
+            return View(viewModel);
         }
 
         public IActionResult Error()
