@@ -1,14 +1,14 @@
 ﻿<Properties StartupConfiguration="{C7938AA6-C25D-4D22-B68B-3F222B8C521A}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="appsettings.json">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Views/Home/Contact.cshtml">
     <Files>
-      <File FileName="Startup.cs" Line="1" Column="1" />
-      <File FileName="Controllers/HomeController.cs" Line="76" Column="45" />
-      <File FileName="Views/Shared/_Layout.cshtml" Line="1" Column="1" />
-      <File FileName="Views/_ViewStart.cshtml" Line="1" Column="1" />
-      <File FileName="Views/Home/Index.cshtml" Line="1" Column="1" />
-      <File FileName="Models/ContactViewModel.cs" Line="1" Column="1" />
+      <File FileName="Controllers/NavController.cs" Line="21" Column="10" />
+      <File FileName="Views/Nav/TopMenu.cshtml" Line="10" Column="62" />
       <File FileName="Program.cs" Line="1" Column="1" />
-      <File FileName="appsettings.json" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="appsettings.json" Line="2" Column="15" NotebookId="1" />
+      <File FileName="Views/Home/Contact.cshtml" Line="1" Column="1" NotebookId="1" />
+      <File FileName="Controllers/HomeController.cs" Line="12" Column="21" NotebookId="1" />
+      <File FileName="Views/Shared/_Layout.cshtml" Line="32" Column="64" NotebookId="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />

@@ -5,7 +5,6 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Empower.Mvc.Models;
-using Empower.Mvc.Models;
 using System.Net.Mail;
 using Microsoft.Extensions.Configuration;
 
